@@ -11,7 +11,7 @@ import FileBase from "react-file-base64";
 import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { createTour } from "../redux/features/tourSlice";
+import { createTour, updateTour } from "../redux/features/tourSlice";
 
 const initialState = {
   title: "",
@@ -56,7 +56,7 @@ const AddEditTour = () => {
       if (!id) {
         dispatch(createTour({ updatedTourData, navigate, toast }));
       } else {
-       console.log("hello")
+        dispatch(updateTour({ id, updatedTourData, toast, navigate }));
       }
       handleClear();
     }
