@@ -104,6 +104,8 @@ export const getToursBySearch = async (req, res) => {
   }
 };
 
+
+ 
 export const getToursByTag = async (req, res) => {
   const { tag } = req.params;
   try {

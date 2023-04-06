@@ -12,7 +12,7 @@ import {
 } from "mdb-react-ui-kit";
 import { useSelector, useDispatch } from "react-redux";
 import { setLogout } from "../redux/features/authSlice";
-// import { searchTours } from "../redux/features/tourSlice";
+import { searchTours } from "../redux/features/tourSlice";
 import { useNavigate } from "react-router-dom";
 import decode from "jwt-decode";
 
@@ -34,7 +34,7 @@ const Header = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (search) {
-    //   dispatch(searchTours(search));
+      dispatch(searchTours(search));
       navigate(`/tours/search?searchQuery=${search}`);
       setSearch("");
     } else {
