@@ -14,7 +14,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { getToursByTag } from "../redux/features/tourSlice";
-import { excerpt } from "../utility";
+// import { excerpt } from "../utility";
 
 const TagTours = () => {
   const { tagTours, loading } = useSelector((state) => ({ ...state.tour }));
@@ -63,7 +63,7 @@ const TagTours = () => {
                       {item.title}
                     </MDBCardTitle>
                     <MDBCardText className="text-start">
-                      {excerpt(item.description, 40)}
+                      {/* {excerpt(item.description, 40)} */}
                     </MDBCardText>
                     <div style={{ float: "left", marginTop: "-10px" }}>
                       <MDBBtn

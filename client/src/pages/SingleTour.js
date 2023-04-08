@@ -10,11 +10,11 @@ import {
 } from "mdb-react-ui-kit";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
-// import moment from "moment";
+  import moment from "moment";
 import { getRelatedTours, getTour } from "../redux/features/tourSlice";
-// import RelatedTours from "../components/RelatedTours";
-// import DisqusThread from "../components/DisqusThread";
-
+  import RelatedTours from "../components/RelatedTours";
+import DisqusThread from "../components/Disqus";
+ 
 const SingleTour = () => {
   const dispatch = useDispatch();
   const { tour, relatedTours } = useSelector((state) => ({ ...state.tour }));
@@ -75,16 +75,16 @@ const SingleTour = () => {
                 size="lg"
               />
               <small className="text-muted">
-                {/* {moment(tour.createdAt).fromNow()} */}
+                {moment(tour.createdAt).fromNow()}
               </small>
-            </MDBCardText>
+            </MDBCardText> <br/>
             <MDBCardText className="lead mb-0 text-start">
               {tour.description}
             </MDBCardText>
           </MDBCardBody>
-          {/* <RelatedTours relatedTours={relatedTours} tourId={id} /> */}
+          <RelatedTours relatedTours={relatedTours} tourId={id} />
         </MDBCard>
-        {/* <DisqusThread id={id} title={tour.title} path={`/tour/${id}`} /> */}
+        <DisqusThread id={id} title={tour.title} path={`/tour/${id}`} />
       </MDBContainer>
     </>
   );

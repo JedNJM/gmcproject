@@ -9,7 +9,7 @@ import {
   MDBCardImage,
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
-import { excerpt } from "../utility";
+// import { excerpt } from "../utility";
 
 const RelatedTours = ({ relatedTours, tourId }) => {
   return (
@@ -41,7 +41,7 @@ const RelatedTours = ({ relatedTours, tourId }) => {
                         {item.title}
                       </MDBCardTitle>
                       <MDBCardText className="text-start">
-                        {excerpt(item.description, 45)}
+                        {/* {excerpt(item.description, 45)} */}
                       </MDBCardText>
                     </MDBCardBody>
                   </MDBCard>

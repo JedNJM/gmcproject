@@ -102,9 +102,17 @@ const CardTour = ({
         <MDBCardBody>
           <MDBCardTitle className="text-start">{title}</MDBCardTitle>
           <MDBCardText className="text-start">
-            {excerpt(description)}
-            <Link to={`/tour/${_id}`}>Read More</Link>
-          </MDBCardText>
+            {excerpt(description)} <br/>
+            <MDBBtn
+                        size="sm"
+                        rounded
+                        color="light"
+                         
+                      > 
+                          <Link to={`/tour/${_id}`} >Read More</Link>
+          
+                      </MDBBtn>
+         </MDBCardText>
         </MDBCardBody>
       </MDBCard>
     </MDBCardGroup>

@@ -6,6 +6,7 @@ import CardTour from "../components/CardTour";
 import Spinner from "../components/Spinner";
 // import Pagination from "../components/Pagination";
 import { useLocation } from "react-router-dom";
+import Pagination from "../components/Pagination";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -61,14 +62,14 @@ const Home = () => {
           </MDBContainer>
         </MDBCol>
       </MDBRow>
-      {/* {tours.length > 0 && !searchQuery && (
+      {tours.length > 0 && !searchQuery && (
         <Pagination
           setCurrentPage={setCurrentPage}
           numberOfPages={numberOfPages}
           currentPage={currentPage}
           dispatch={dispatch}
         />
-      )} */}
+      )}
     </div>
   );
 };
