@@ -53,7 +53,7 @@ const Header = () => {
           href="/"
           style={{ color: "#606080", fontWeight: "600", fontSize: "22px" }}
         >
-          Touropedia
+          Opportunity Oasis
         </MDBNavbarBrand>
         <MDBNavbarToggler
           type="button"
