@@ -42,7 +42,7 @@ const TagTours = () => {
         alignContent: "center",
       }}
     >
-      <h3 className="text-center">Tours with tag: {tag}</h3>
+      <h3 className="text-center">Opportunities with tag: {tag}</h3>
       <hr style={{ maxWidth: "570px" }} />
       {tagTours &&
         tagTours.map((item) => (

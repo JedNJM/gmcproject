@@ -1,5 +1,4 @@
-import "./App.css";
-import { ToastContainer, toast } from "react-toastify";
+import "./App.css"; 
 import "react-toastify/dist/ReactToastify.css";
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
@@ -15,6 +14,8 @@ import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import NotFound from "./pages/NotFound";
 import TagTours from './pages/TagTours';
+import HomePage from "./pages/HomePage";
+import Footer from "./components/Footer.jsx"
 function App() {
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("profile"));
@@ -27,7 +28,8 @@ function App() {
       <Header />
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/tours/search" element={<Home />} />
           <Route path="/tours/tag/:tag" element={<TagTours/>}/>
           <Route path="/login" element={<Login />} />
@@ -59,6 +61,8 @@ function App() {
           />
           <Route path="*" element={<NotFound/>} />
         </Routes>
+        <Footer/>
+
       </div>
     </>
   );

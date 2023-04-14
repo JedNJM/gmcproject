@@ -43,7 +43,7 @@ const Home = () => {
       <MDBRow className="mt-5">
         {tours.length === 0 && location.pathname === "/" && (
           <MDBTypography className="text-center mb-0" tag="h2">
-            No Tours Found
+            No Opportunity Found
           </MDBTypography>
         )}
 
@@ -70,6 +70,9 @@ const Home = () => {
           dispatch={dispatch}
         />
       )}
+      <div style={{marginTop:"100px"}}>
+
+      </div>
     </div>
   );
 };

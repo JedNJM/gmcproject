@@ -47,7 +47,10 @@ const Header = () => {
   };
 
   return (
-    <MDBNavbar fixed="top" expand="lg" style={{ backgroundColor: "#f0e6ea" }}>
+    // fixed header div
+   
+    
+    <MDBNavbar fixed="top" expand="lg" style={{ backgroundColor: "#ffff" }}>
       <MDBContainer>
         <MDBNavbarBrand
           href="/"
@@ -76,11 +79,16 @@ const Header = () => {
                 <p className="header-text">Home</p>
               </MDBNavbarLink>
             </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href="/Home">
+                <p className="header-text">Opportunities</p>
+              </MDBNavbarLink>
+            </MDBNavbarItem>
             {user?.result?._id && (
               <>
                 <MDBNavbarItem>
                   <MDBNavbarLink href="/addTour">
-                    <p className="header-text">Add Tour</p>
+                    <p className="header-text">Add Opportunity</p>
                   </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
@@ -110,7 +118,7 @@ const Header = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Search Tour"
+              placeholder="Search Opportunity"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -121,7 +129,7 @@ const Header = () => {
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
-  );
+    );
 };
 
 export default Header;
